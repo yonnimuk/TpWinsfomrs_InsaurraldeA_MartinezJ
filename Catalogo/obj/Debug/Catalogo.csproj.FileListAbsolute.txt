@@ -1,0 +1,10 @@
+E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\PrimerTpMaxi\Catalogo\bin\Debug\Catalogo.exe.config
+E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\PrimerTpMaxi\Catalogo\bin\Debug\Catalogo.exe
+E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\PrimerTpMaxi\Catalogo\bin\Debug\Catalogo.pdb
+E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\PrimerTpMaxi\Catalogo\obj\Debug\Catalogo.csproj.AssemblyReference.cache
+E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\PrimerTpMaxi\Catalogo\obj\Debug\Catalogo.Form1.resources
+E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\PrimerTpMaxi\Catalogo\obj\Debug\Catalogo.Properties.Resources.resources
+E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\PrimerTpMaxi\Catalogo\obj\Debug\Catalogo.csproj.GenerateResource.cache
+E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\PrimerTpMaxi\Catalogo\obj\Debug\Catalogo.csproj.CoreCompileInputs.cache
+E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\PrimerTpMaxi\Catalogo\obj\Debug\Catalogo.exe
+E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\PrimerTpMaxi\Catalogo\obj\Debug\Catalogo.pdb
