@@ -19,7 +19,7 @@ namespace Catalogo
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio FROM ARTICULOS";
+                comando.CommandText = "SELECT A.Id AS ID, A.Codigo AS Codigo, A.Nombre AS Nombre,A.Descripcion AS Descripcion, M.Descripcion AS Marca, isnull(C.Descripcion,'Sin Categoria') AS Categoria, ImagenUrl, Precio FROM ARTICULOS AS A LEFT JOIN MARCAS AS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -29,13 +29,17 @@ namespace Catalogo
                 while (lector.Read())
                 { 
                     Articulo aux = new Articulo();
+                    
+                    
 
-                    aux.Id = (int)lector["Id"];
+                    aux.Id = (int)lector["ID"];
                     aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    aux.IdMarca = (int)lector["IdMarca"];
-                    aux.IdCategoria = (int)lector["IdCategoria"];
+                    aux.Marca = new Marcas();
+                    aux.Marca.Descripcion = (string)lector["Marca"];
+                    aux.Categoria = new Categorias();
+                    aux.Categoria.Descripcion = (string)lector["Categoria"];
                     aux.ImagenUrl = (string)lector["ImagenUrl"];
                     aux.Precio = (decimal)lector["Precio"];
 
@@ -48,7 +52,6 @@ namespace Catalogo
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
 
