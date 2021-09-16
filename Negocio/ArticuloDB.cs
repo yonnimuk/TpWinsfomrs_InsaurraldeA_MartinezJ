@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using Dominio;
 
-namespace Catalogo
+namespace DBArticulo
 {
-    class ArticuloDB
+    public class ArticuloDB
     {
         public List<Articulo> listaArticulo()
         {
@@ -56,5 +57,27 @@ namespace Catalogo
             }
 
         }
+
+        public void agregar(Articulo nuevoArt)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio)values('" + nuevoArt.Codigo + "', '" + nuevoArt.Nombre + "', '"+ nuevoArt.Descripcion + "', " + nuevoArt.Precio);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        
+
     }
 }

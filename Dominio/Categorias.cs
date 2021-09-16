@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Catalogo
+namespace Dominio
 {
-    class Categorias
+    public class Categorias
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }

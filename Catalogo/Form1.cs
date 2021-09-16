@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
+using DBArticulo;
 
 namespace Catalogo
 {
@@ -23,6 +25,7 @@ namespace Catalogo
             ArticuloDB articulo = new ArticuloDB();
             articuloLista = articulo.listaArticulo();
             dataGridView1.DataSource = articuloLista;
+            dataGridView1.Columns["ImagenUrl"].Visible = false;
             cargarImagen(articuloLista[0].ImagenUrl);
         }
 
@@ -44,5 +47,10 @@ namespace Catalogo
             }
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregar agregar = new frmAgregar();
+            agregar.ShowDialog();
+        }
     }
 }
