@@ -39,10 +39,13 @@ namespace Catalogo
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(22, 22);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 72;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1016, 406);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -50,7 +53,7 @@ namespace Catalogo
             // pxbArticulos
             // 
             this.pxbArticulos.Location = new System.Drawing.Point(1071, 22);
-            this.pxbArticulos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pxbArticulos.Margin = new System.Windows.Forms.Padding(6);
             this.pxbArticulos.Name = "pxbArticulos";
             this.pxbArticulos.Size = new System.Drawing.Size(403, 406);
             this.pxbArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -75,8 +78,9 @@ namespace Catalogo
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pxbArticulos);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

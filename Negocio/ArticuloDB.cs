@@ -41,7 +41,8 @@ namespace DBArticulo
                     aux.Marca.Descripcion = (string)lector["Marca"];
                     aux.Categoria = new Categorias();
                     aux.Categoria.Descripcion = (string)lector["Categoria"];
-                    aux.ImagenUrl = (string)lector["ImagenUrl"];
+                    if(!(lector["ImagenUrl"] is DBNull))
+                        aux.ImagenUrl = (string)lector["ImagenUrl"];
                     aux.Precio = (decimal)lector["Precio"];
 
                     lista.Add(aux);
@@ -63,13 +64,17 @@ namespace DBArticulo
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio)values('" + nuevoArt.Codigo + "', '" + nuevoArt.Nombre + "', '"+ nuevoArt.Descripcion + "', " + nuevoArt.Precio);
+                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria, ImagenUrl)values('" + nuevoArt.Codigo + "', '" + nuevoArt.Nombre + "', '" + nuevoArt.Descripcion + "', " + nuevoArt.Precio + ", @idMarca, @idCategoria, @ImagenUrl )");
+                datos.setearParametro("@idMarca", nuevoArt.Marca.Id);
+                datos.setearParametro("@idCategoria", nuevoArt.Categoria.Id);
+                datos.setearParametro("@ImagenUrl", nuevoArt.ImagenUrl);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+
 
             finally
             {

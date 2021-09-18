@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
+
 namespace DBArticulo
 {
     public class AccesoDatos
@@ -59,6 +60,12 @@ namespace DBArticulo
             }
 
         }
+
+        public void setearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
+        }
+
         public void cerrarConexion()
         {
             if(lector != null)

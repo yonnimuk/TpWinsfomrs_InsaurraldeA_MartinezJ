@@ -19,11 +19,6 @@ namespace Catalogo
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
@@ -40,6 +35,9 @@ namespace Catalogo
                 nuevoArticulo.Nombre = txtNombre.Text;
                 nuevoArticulo.Descripcion = txtDescripcion.Text;
                 nuevoArticulo.Precio = decimal.Parse(txtPrecio.Text);
+                nuevoArticulo.ImagenUrl = txtImagen.Text;
+                nuevoArticulo.Marca = (Marcas)cbMarca.SelectedItem;
+                nuevoArticulo.Categoria = (Categorias)cbCategoria.SelectedItem;
 
                 artDB.agregar(nuevoArticulo);
                 MessageBox.Show("Artículo agregado");
@@ -49,6 +47,40 @@ namespace Catalogo
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void frmAgregar_Load(object sender, EventArgs e)
+        {
+            MarcasDB marcaDB = new MarcasDB();
+            CategoriasDB categoriaDB = new CategoriasDB();
+
+            try
+            {
+                cbMarca.DataSource = marcaDB.listar();
+                cbCategoria.DataSource = categoriaDB.listar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void txtImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtImagen.Text);
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            { 
+                pbxAgregar.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pbxAgregar.Load("https://www.trecebits.com/wp-content/uploads/2020/11/Error-404.jpg");
             }
         }
     }

@@ -22,11 +22,23 @@ namespace Catalogo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cargar();
+        }
+        private void cargar()
+        {
             ArticuloDB articulo = new ArticuloDB();
-            articuloLista = articulo.listaArticulo();
-            dataGridView1.DataSource = articuloLista;
-            dataGridView1.Columns["ImagenUrl"].Visible = false;
-            cargarImagen(articuloLista[0].ImagenUrl);
+            try
+            {
+                articuloLista = articulo.listaArticulo();
+                dataGridView1.DataSource = articuloLista;
+                dataGridView1.Columns["ImagenUrl"].Visible = false;
+                cargarImagen(articuloLista[0].ImagenUrl);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -41,7 +53,7 @@ namespace Catalogo
             {
                 pxbArticulos.Load(imagen);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 pxbArticulos.Load("https://www.trecebits.com/wp-content/uploads/2020/11/Error-404.jpg");
             }
@@ -51,6 +63,7 @@ namespace Catalogo
         {
             frmAgregar agregar = new frmAgregar();
             agregar.ShowDialog();
+            cargar();
         }
     }
 }
