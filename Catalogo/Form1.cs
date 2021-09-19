@@ -84,5 +84,14 @@ namespace Catalogo
             frmDetalle Detalle = new frmDetalle(seleccionado); // aca creamos una variable de el típo detalle para poder usar el winsfomr correspondiente
             Detalle.ShowDialog();// aca invocamos el winsfomrs para q se vea en pantalla
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+            frmEliminar eliminarArt = new frmEliminar(seleccionado);
+            eliminarArt.ShowDialog();
+            cargar();
+        }
     }
 }

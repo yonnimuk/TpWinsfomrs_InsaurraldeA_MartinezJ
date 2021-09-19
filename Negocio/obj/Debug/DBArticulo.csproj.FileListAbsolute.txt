@@ -16,3 +16,12 @@ E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\TpWinsfomrs_Insaurral
 E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\obj\Debug\DBArticulo.csproj.CopyComplete
 E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\obj\Debug\Negocio.dll
 E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\obj\Debug\Negocio.pdb
+C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\bin\Debug\Negocio.dll
+C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\bin\Debug\Negocio.pdb
+C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\bin\Debug\Dominio.dll
+C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\bin\Debug\Dominio.pdb
+C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\obj\Debug\DBArticulo.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\obj\Debug\DBArticulo.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\obj\Debug\DBArticulo.csproj.CopyComplete
+C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\obj\Debug\Negocio.dll
+C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Negocio\obj\Debug\Negocio.pdb

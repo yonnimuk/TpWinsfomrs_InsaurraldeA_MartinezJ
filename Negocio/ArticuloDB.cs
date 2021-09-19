@@ -110,8 +110,24 @@ namespace DBArticulo
                 datos.cerrarConexion();
             }
         }
+        public void eliminar(Articulo elimArticulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
 
-
+            try
+            {
+                datos.setearConsulta("Delete from ARTICULOS where id = " + elimArticulo.Id + "");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
     }
 }
