@@ -70,10 +70,4 @@ E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\TpWinsfomrs_Insaurral
 E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\TpWinsfomrs_InsaurraldeA_MartinezJ\Catalogo\obj\Debug\Catalogo.csproj.CopyComplete
 E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\TpWinsfomrs_InsaurraldeA_MartinezJ\Catalogo\obj\Debug\Catalogo.exe
 E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\TpWinsfomrs_InsaurraldeA_MartinezJ\Catalogo\obj\Debug\Catalogo.pdb
-E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\Catalogo\bin\Debug\Dominio.dll
-E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\Catalogo\bin\Debug\Negocio.dll
-E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\Catalogo\bin\Debug\Dominio.pdb
-E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\Catalogo\bin\Debug\Negocio.pdb
-E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\Catalogo\obj\Debug\Catalogo.frmAgregar.resources
-E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\Catalogo\obj\Debug\Catalogo.frmVerDetalle.resources
-E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\Catalogo\obj\Debug\Catalogo.csproj.CopyComplete
+E:\tercerCuatrimestre\ReCurzadaPorPette\ReposCsharp\MaxiTP\TpWinsfomrs_InsaurraldeA_MartinezJ\Catalogo\obj\Debug\Catalogo.frmDetalle.resources

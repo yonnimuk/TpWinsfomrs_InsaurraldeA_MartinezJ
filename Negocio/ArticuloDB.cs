@@ -84,19 +84,20 @@ namespace DBArticulo
             }
         }
 
-        public void modificar(Articulo art) 
+        public void modificar(Articulo art)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearConsulta("update ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarc, IdCategoria = @IdCate, ImagenUrl = @ImgUrl, Precio = @Precio WHERE Id =" + art.Id + "");
-                datos.setearParametro("@Codigo",art.Codigo);
-                datos.setearParametro("@Nombre",art.Nombre);
-                datos.setearParametro("@Descripcion",art.Descripcion);
-                datos.setearParametro("@IdMarc",art.Marca.Id);
-                datos.setearParametro("@IdCate",art.Categoria.Id);
-                datos.setearParametro("@ImgUrl",art.ImagenUrl);
-                datos.setearParametro("@Precio",art.Precio);
+
+                datos.setearParametro("@Codigo", art.Codigo);
+                datos.setearParametro("@Nombre", art.Nombre);
+                datos.setearParametro("@Descripcion", art.Descripcion);
+                datos.setearParametro("@IdMarc", art.Marca.Id); // trae null
+                datos.setearParametro("@IdCate", art.Categoria.Id);
+                datos.setearParametro("@ImgUrl", art.ImagenUrl);
+                datos.setearParametro("@Precio", art.Precio);
 
                 datos.ejecutarAccion();
             }
@@ -108,9 +109,9 @@ namespace DBArticulo
             {
                 datos.cerrarConexion();
             }
-        } 
+        }
 
-        
+
 
     }
 }

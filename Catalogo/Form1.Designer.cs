@@ -33,7 +33,7 @@ namespace Catalogo
             this.pxbArticulos = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnDetalle = new System.Windows.Forms.Button();
+            this.fmrDetalle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pxbArticulos)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +63,7 @@ namespace Catalogo
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(21, 252);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(88, 23);
             this.btnAgregar.TabIndex = 2;
@@ -73,37 +73,37 @@ namespace Catalogo
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(125, 252);
+            this.btnModificar.Location = new System.Drawing.Point(130, 252);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(85, 23);
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnDetalle
+            // fmrDetalle
             // 
-            this.btnDetalle.Location = new System.Drawing.Point(235, 252);
-            this.btnDetalle.Name = "btnDetalle";
-            this.btnDetalle.Size = new System.Drawing.Size(80, 23);
-            this.btnDetalle.TabIndex = 4;
-            this.btnDetalle.Text = "Detalle";
-            this.btnDetalle.UseVisualStyleBackColor = true;
-            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
+            this.fmrDetalle.Location = new System.Drawing.Point(248, 252);
+            this.fmrDetalle.Name = "fmrDetalle";
+            this.fmrDetalle.Size = new System.Drawing.Size(75, 23);
+            this.fmrDetalle.TabIndex = 4;
+            this.fmrDetalle.Text = "Detalle";
+            this.fmrDetalle.UseVisualStyleBackColor = true;
+            this.fmrDetalle.Click += new System.EventHandler(this.fmrDetalle_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 291);
-            this.Controls.Add(this.btnDetalle);
+            this.ClientSize = new System.Drawing.Size(832, 291);
+            this.Controls.Add(this.fmrDetalle);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pxbArticulos);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Catalogo";
+            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pxbArticulos)).EndInit();
@@ -117,7 +117,7 @@ namespace Catalogo
         private System.Windows.Forms.PictureBox pxbArticulos;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnDetalle;
+        private System.Windows.Forms.Button fmrDetalle;
     }
 }
 

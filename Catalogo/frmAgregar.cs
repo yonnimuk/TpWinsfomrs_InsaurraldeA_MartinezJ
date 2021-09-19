@@ -48,7 +48,7 @@ namespace Catalogo
                 articulo.Categoria = (Categorias)cbCategoria.SelectedItem;
 
                 if (articulo.Id != 0)
-                { 
+                {
                     artDB.modificar(articulo);
                     MessageBox.Show("Articulo Modificado");
                 }
@@ -58,7 +58,7 @@ namespace Catalogo
                     MessageBox.Show("Artículo agregado");
                 }
 
-                
+
                 Close();
 
             }
@@ -82,7 +82,7 @@ namespace Catalogo
                 cbCategoria.ValueMember = "Id";
                 cbCategoria.DisplayMember = "Descripcion";
 
-                if (articulo != null) 
+                if (articulo != null)
                 {
                     txtCodigo.Text = articulo.Codigo;
                     txtNombre.Text = articulo.Nombre;
@@ -109,7 +109,7 @@ namespace Catalogo
         private void cargarImagen(string imagen)
         {
             try
-            { 
+            {
                 pbxAgregar.Load(imagen);
             }
             catch (Exception ex)

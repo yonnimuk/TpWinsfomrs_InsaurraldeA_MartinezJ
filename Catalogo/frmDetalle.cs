@@ -12,17 +12,17 @@ using DBArticulo;
 
 namespace Catalogo
 {
-    public partial class frmVerDetalle : Form
+    public partial class frmDetalle : Form
     {
-        public frmVerDetalle()
+        public frmDetalle()
         {
             InitializeComponent();
         }
-        public frmVerDetalle(Articulo articulo)
+        public frmDetalle(Articulo articulo)
         {
             InitializeComponent();
             frmVerDetalle_Load(articulo);
-            
+
         }
         public void frmVerDetalle_Load(Articulo articulo)
         {
@@ -37,7 +37,7 @@ namespace Catalogo
                 txtCategoria.Text = "Categoria: " + articulo.Categoria.Descripcion;
                 txtPrecio.Text = "Precio: $ " + articulo.Precio;
                 txtImagenUrl.Text = "URL: " + articulo.ImagenUrl;
-                
+
                 cargarImagenDetalle(articulo.ImagenUrl);
             }
             catch (Exception)
@@ -47,7 +47,6 @@ namespace Catalogo
             }
 
         }
-
         private void cargarImagenDetalle(string imagen)
         {
             try
@@ -59,23 +58,7 @@ namespace Catalogo
                 pxbDetalle.Load("https://www.trecebits.com/wp-content/uploads/2020/11/Error-404.jpg");
             }
         }
-
-        private void frmVerDetalle_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCodigo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCategoria_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtImagenUrl_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
