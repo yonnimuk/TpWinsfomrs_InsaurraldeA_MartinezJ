@@ -43,27 +43,30 @@ namespace Catalogo
             // txtCodigo
             // 
             this.txtCodigo.AutoSize = true;
-            this.txtCodigo.Location = new System.Drawing.Point(12, 29);
+            this.txtCodigo.Location = new System.Drawing.Point(66, 53);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(35, 13);
+            this.txtCodigo.Size = new System.Drawing.Size(64, 25);
             this.txtCodigo.TabIndex = 0;
             this.txtCodigo.Text = "label1";
             // 
             // txtNombre
             // 
             this.txtNombre.AutoSize = true;
-            this.txtNombre.Location = new System.Drawing.Point(12, 76);
+            this.txtNombre.Location = new System.Drawing.Point(66, 139);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(35, 13);
+            this.txtNombre.Size = new System.Drawing.Size(64, 25);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Text = "label2";
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.AutoSize = true;
-            this.txtDescripcion.Location = new System.Drawing.Point(12, 122);
+            this.txtDescripcion.Location = new System.Drawing.Point(66, 224);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(35, 13);
+            this.txtDescripcion.Size = new System.Drawing.Size(64, 25);
             this.txtDescripcion.TabIndex = 2;
             this.txtDescripcion.Text = "label3";
             this.txtDescripcion.Click += new System.EventHandler(this.label3_Click);
@@ -71,53 +74,58 @@ namespace Catalogo
             // txtMarca
             // 
             this.txtMarca.AutoSize = true;
-            this.txtMarca.Location = new System.Drawing.Point(12, 168);
+            this.txtMarca.Location = new System.Drawing.Point(66, 309);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(35, 13);
+            this.txtMarca.Size = new System.Drawing.Size(64, 25);
             this.txtMarca.TabIndex = 3;
             this.txtMarca.Text = "label4";
             // 
             // txtCategoria
             // 
             this.txtCategoria.AutoSize = true;
-            this.txtCategoria.Location = new System.Drawing.Point(12, 214);
+            this.txtCategoria.Location = new System.Drawing.Point(66, 394);
+            this.txtCategoria.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(35, 13);
+            this.txtCategoria.Size = new System.Drawing.Size(64, 25);
             this.txtCategoria.TabIndex = 4;
             this.txtCategoria.Text = "label5";
             // 
             // txtPrecio
             // 
             this.txtPrecio.AutoSize = true;
-            this.txtPrecio.Location = new System.Drawing.Point(12, 253);
+            this.txtPrecio.Location = new System.Drawing.Point(66, 466);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(35, 13);
+            this.txtPrecio.Size = new System.Drawing.Size(64, 25);
             this.txtPrecio.TabIndex = 5;
             this.txtPrecio.Text = "label6";
             // 
             // txtImagenUrl
             // 
             this.txtImagenUrl.AutoSize = true;
-            this.txtImagenUrl.Location = new System.Drawing.Point(12, 295);
+            this.txtImagenUrl.Location = new System.Drawing.Point(66, 544);
+            this.txtImagenUrl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.txtImagenUrl.Name = "txtImagenUrl";
-            this.txtImagenUrl.Size = new System.Drawing.Size(35, 13);
+            this.txtImagenUrl.Size = new System.Drawing.Size(64, 25);
             this.txtImagenUrl.TabIndex = 6;
             this.txtImagenUrl.Text = "label7";
             // 
             // pxbDetalle
             // 
-            this.pxbDetalle.Location = new System.Drawing.Point(320, 0);
+            this.pxbDetalle.Location = new System.Drawing.Point(709, 53);
+            this.pxbDetalle.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pxbDetalle.Name = "pxbDetalle";
-            this.pxbDetalle.Size = new System.Drawing.Size(255, 247);
+            this.pxbDetalle.Size = new System.Drawing.Size(468, 456);
             this.pxbDetalle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pxbDetalle.TabIndex = 7;
             this.pxbDetalle.TabStop = false;
             // 
             // frmDetalle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 318);
+            this.ClientSize = new System.Drawing.Size(1390, 635);
             this.Controls.Add(this.pxbDetalle);
             this.Controls.Add(this.txtImagenUrl);
             this.Controls.Add(this.txtPrecio);
@@ -126,8 +134,10 @@ namespace Catalogo
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigo);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmDetalle";
-            this.Text = "frmDetalle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Detalle ";
             ((System.ComponentModel.ISupportInitialize)(this.pxbDetalle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

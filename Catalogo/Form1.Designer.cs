@@ -77,7 +77,7 @@ namespace Catalogo
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(271, 496);
+            this.btnModificar.Location = new System.Drawing.Point(270, 496);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(6);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(161, 42);
@@ -88,7 +88,7 @@ namespace Catalogo
             // 
             // fmrDetalle
             // 
-            this.fmrDetalle.Location = new System.Drawing.Point(482, 496);
+            this.fmrDetalle.Location = new System.Drawing.Point(481, 496);
             this.fmrDetalle.Margin = new System.Windows.Forms.Padding(6);
             this.fmrDetalle.Name = "fmrDetalle";
             this.fmrDetalle.Size = new System.Drawing.Size(161, 42);
@@ -110,7 +110,7 @@ namespace Catalogo
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(699, 496);
+            this.btnBuscar.Location = new System.Drawing.Point(698, 496);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(6);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(161, 42);
