@@ -129,5 +129,76 @@ namespace DBArticulo
             }
         }
 
+        public List<Articulo> buscar(string criterio, string valorBuscado)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+
+                try
+                {
+                    if (criterio == "Código")
+                    {
+                        comando.CommandText = "Select A.Id as ID, A.Codigo as Codigo, A.Nombre as Nombre, A.Descripcion as Descripcion, M.Descripcion as Marca, isnull(C.Descripcion,'Sin Categoria') as Categoria, ImagenUrl, Precio from ARTICULOS as A Left join MARCAS as M on A.IdMarca = M.Id Left join CATEGORIAS as C on A.IdCategoria = C.Id where A.Codigo like ('%" + valorBuscado + "%')";
+                    }
+                    else if (criterio == "Nombre")
+                    {
+                        comando.CommandText = "Select A.Id as ID, A.Codigo as Codigo, A.Nombre as Nombre, A.Descripcion as Descripcion, M.Descripcion as Marca, isnull(C.Descripcion,'Sin Categoria') as Categoria, ImagenUrl, Precio  from ARTICULOS as A Left join MARCAS as M on A.IdMarca = M.Id Left join CATEGORIAS as C on A.IdCategoria = C.Id where A.Nombre like ('%" + valorBuscado + "%')";
+                    }
+                    else if (criterio == "Marca")
+                    {
+                        comando.CommandText = "Select A.Id as ID, A.Codigo as Codigo, A.Nombre as Nombre, A.Descripcion as Descripcion, M.Descripcion as Marca, isnull(C.Descripcion,'Sin Categoria') as Categoria, ImagenUrl, Precio  from ARTICULOS as A Left join MARCAS as M on A.IdMarca = M.Id Left join CATEGORIAS as C on A.IdCategoria = C.Id where M.Descripcion like ('%" + valorBuscado + "%')";
+                    }
+                    else if (criterio == "Categoría")
+                    {
+                        comando.CommandText = "Select A.Id as ID, A.Codigo as Codigo, A.Nombre as Nombre, A.Descripcion as Descripcion, M.Descripcion as Marca, isnull(C.Descripcion,'Sin Categoria') as Categoria, ImagenUrl, Precio  from ARTICULOS as A Left join MARCAS as M on A.IdMarca = M.Id Left join CATEGORIAS as C on A.IdCategoria = C.Id where C.Descripcion like ('%" + valorBuscado + "%')";
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+                
+                comando.Connection = conexion;
+                conexion.Open();
+
+                lector = comando.ExecuteReader();
+
+                while (lector.Read())
+                {
+                    Articulo aux = new Articulo();
+
+                    aux.Id = (int)lector["ID"];
+                    aux.Codigo = (string)lector["Codigo"];
+                    aux.Nombre = (string)lector["Nombre"];
+                    aux.Descripcion = (string)lector["Descripcion"];
+                    aux.Marca = new Marcas();
+                    aux.Marca.Descripcion = (string)lector["Marca"];
+                    aux.Categoria = new Categorias();
+                    aux.Categoria.Descripcion = (string)lector["Categoria"];
+                    if (!(lector["ImagenUrl"] is DBNull))
+                        aux.ImagenUrl = (string)lector["ImagenUrl"];
+                    aux.Precio = (decimal)lector["Precio"];
+
+                    lista.Add(aux);
+                }
+
+                conexion.Close();
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
     }
 }

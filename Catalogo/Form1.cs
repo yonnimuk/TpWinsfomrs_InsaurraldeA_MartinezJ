@@ -93,5 +93,11 @@ namespace Catalogo
             eliminarArt.ShowDialog();
             cargar();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscar ventanaBuscar = new frmBuscar();
+            ventanaBuscar.ShowDialog();
+        }
     }
 }

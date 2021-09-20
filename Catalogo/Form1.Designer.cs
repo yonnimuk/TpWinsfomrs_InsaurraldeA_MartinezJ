@@ -35,6 +35,7 @@ namespace Catalogo
             this.btnModificar = new System.Windows.Forms.Button();
             this.fmrDetalle = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pxbArticulos)).BeginInit();
             this.SuspendLayout();
@@ -43,8 +44,8 @@ namespace Catalogo
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 22);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Location = new System.Drawing.Point(58, 53);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 72;
@@ -55,8 +56,8 @@ namespace Catalogo
             // 
             // pxbArticulos
             // 
-            this.pxbArticulos.Location = new System.Drawing.Point(1071, 22);
-            this.pxbArticulos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pxbArticulos.Location = new System.Drawing.Point(1107, 53);
+            this.pxbArticulos.Margin = new System.Windows.Forms.Padding(6);
             this.pxbArticulos.Name = "pxbArticulos";
             this.pxbArticulos.Size = new System.Drawing.Size(403, 406);
             this.pxbArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -65,8 +66,8 @@ namespace Catalogo
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(39, 465);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Location = new System.Drawing.Point(58, 496);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(161, 42);
             this.btnAgregar.TabIndex = 2;
@@ -76,8 +77,8 @@ namespace Catalogo
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(210, 465);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnModificar.Location = new System.Drawing.Point(271, 496);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(6);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(161, 42);
             this.btnModificar.TabIndex = 3;
@@ -87,8 +88,8 @@ namespace Catalogo
             // 
             // fmrDetalle
             // 
-            this.fmrDetalle.Location = new System.Drawing.Point(383, 465);
-            this.fmrDetalle.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fmrDetalle.Location = new System.Drawing.Point(482, 496);
+            this.fmrDetalle.Margin = new System.Windows.Forms.Padding(6);
             this.fmrDetalle.Name = "fmrDetalle";
             this.fmrDetalle.Size = new System.Drawing.Size(161, 42);
             this.fmrDetalle.TabIndex = 4;
@@ -98,7 +99,7 @@ namespace Catalogo
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(556, 465);
+            this.btnEliminar.Location = new System.Drawing.Point(913, 496);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(6);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(161, 42);
@@ -107,21 +108,33 @@ namespace Catalogo
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(699, 496);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(161, 42);
+            this.btnBuscar.TabIndex = 6;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1525, 537);
+            this.ClientSize = new System.Drawing.Size(1568, 593);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.fmrDetalle);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pxbArticulos);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Catalogo";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pxbArticulos)).EndInit();
@@ -137,6 +150,7 @@ namespace Catalogo
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button fmrDetalle;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
 

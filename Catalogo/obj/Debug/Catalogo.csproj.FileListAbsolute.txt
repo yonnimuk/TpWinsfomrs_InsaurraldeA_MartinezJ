@@ -89,3 +89,4 @@ C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Catalogo\bin\D
 C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Catalogo\bin\Debug\Dominio.pdb
 C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Catalogo\bin\Debug\Negocio.pdb
 C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Catalogo\obj\Debug\Catalogo.csproj.CopyComplete
+C:\Users\User\Documents\GitHub\TpWinsfomrs_InsaurraldeA_MartinezJ\Catalogo\obj\Debug\Catalogo.frmBuscar.resources
